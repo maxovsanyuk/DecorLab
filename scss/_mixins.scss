@@ -1,0 +1,23 @@
+@mixin transform($transform) {
+-webkit-transform: $transform;
+   -moz-transform: $transform;
+    -ms-transform: $transform;
+     -o-transform: $transform;
+        transform: $transform;
+}
+
+@mixin transition($transition) {
+-webkit-transition: $transition;
+   -moz-transition: $transition;
+    -ms-transition: $transition;
+     -o-transition: $transition;
+        transition: $transition;
+}
+
+@mixin opacity($opacity) {
+-webkit-opacity: $opacity;
+   -moz-opacity: $opacity;
+    -ms-opacity: $opacity;
+     -o-opacity: $opacity;
+        opacity: $opacity;
+}

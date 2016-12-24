@@ -1,0 +1,356 @@
+@import 'mixins';
+@import 'fonts';
+@import 'main';
+@import 'slick';
+@import 'slick-theme';
+@import 'header';
+@import 'sliders';
+@import 'about-us';
+@import 'award';
+@import 'footer';
+
+
+// --------------< @media >-------------
+
+@media screen and (max-width: 1000px){
+.header-bottom__nav {
+	margin: 0 10px;
+	font-size: 12px;
+	}
+
+.dekor-lab__content {
+	width: 47%;
+	margin: 55px 0 0 10px;
+	overflow: auto;
+	}
+
+.dekor-lab__photo {
+	width: 45%;
+	margin: 55px 10px 0 0;
+	button{
+		margin: 28% auto;
+		}
+	}
+
+.dekor-lab__item1{
+	a{
+	font-size: 12px;
+	padding-left: 70px;
+}
+	&:before{
+	left: 10%;
+	}
+}
+
+.dekor-lab__item1:nth-child(3){
+	margin-right: 3%;
+}
+
+.slider2 {
+	height: 380px;
+}
+
+.slider2-photo1{
+	height: 180px;
+}
+
+.footer-top__item2{
+	h4{
+		margin: 40px 0 0 10%!important;
+		font-size: 14px!important;
+	}
+	a{
+		padding: 12px 0 0 20%!important;
+		font-size: 10px!important;
+	}
+}
+
+.footer-top__item{
+	a:before{
+		left: 10%!important;
+	}
+	a:hover:before{
+		left: 0%!important;
+	}
+	p{
+		font-size: 12px!important;
+	}
+}
+
+.footer-top__item3{
+	@extend .footer-top__item2;
+}
+
+.footer-top__item4{
+	@extend .footer-top__item2;
+	a{
+		font-size: 8px;
+		padding-left: 25%!important;
+	}
+	a:nth-child(4) {
+	padding-left: 25% !important;
+	}
+	a:nth-child(5) {
+	padding-left: 25% !important;
+	}
+	a:nth-child(6) {
+	padding-left: 25% !important;
+		}
+	}
+}
+
+@media screen and (max-width: 750px){
+.header-top__phone, .header-top__mail {
+	width: 24%;
+	padding-right: 5px;
+	font-size: 6px;
+}
+
+.header-top__phone:before{
+	top: 30%;
+	left: 8px;
+}
+
+.header-top__mail:before{
+	left: 4px;
+}
+
+.header-top{
+	button {
+	width: 25%;
+	font-size: 6px;
+	padding-left: 10px;
+	&:before{
+		top: 25%;
+		}
+	}
+}
+
+.header-bottom__shop {
+	width: 25%;
+	padding-right: 0;
+	&:hover{
+		a{
+			span{
+				right: 35px;
+			}
+		}
+	}
+	a{
+		font-size: 7px;
+		margin-right: 5px;
+		span{
+			font-size: 10px;
+		}
+	}
+}
+
+.header-bottom__nav{
+		margin: 0 2px 0 0;
+		width: 15%;
+		font-size: 8px;
+		text-align: center;
+}
+
+.header-bottom__active:after {
+	display: none;
+}
+
+.header-bottom__logo {
+	display: none;
+}
+
+.slider__border {
+	right: 5%;
+	p{
+		width: 300px;
+		font-size: 14px;
+	}
+}
+
+.category {
+	height: 180px;
+		&__item{
+		margin: 10px auto 0;
+		&:nth-child(2){
+			margin: 10px auto 0;
+		}
+		&:first-child {
+			p{
+				margin-left: 1rem;
+			}
+		}
+		&:nth-child(2) {
+			p{
+				padding-top: 20px;
+			}
+		}
+		p{
+			font-size: 9px;
+		}
+	}
+	img{
+		width: 80%;
+		height: 50%;
+	}
+}
+
+.dekor-lab__photo{
+	display: none;
+}
+
+.dekor-lab__content {
+	width: 95%;
+	height: 220px;
+	margin: 15px 0 0 10px;
+}
+
+.dekor-lab{
+	p{
+		font-size: 9px;
+	}
+}
+
+.dekor-lab__item1{
+	width: 45%;
+	margin: 0.5rem 10px 0 5px;
+	a{
+		font-size: 10px;
+		padding-left: 65px;
+	}
+}
+
+.slider2-photo1{
+	height: 80px;
+	&:hover{
+		p{
+			display: none;
+		}
+	}
+}
+
+.slider2{
+	height: 260px;
+}
+
+.progress{
+	height: 610px;
+}
+
+.award1{
+	width: 100%;
+}
+
+.footer-top__item{
+	width: 22% !important;
+	h3{
+		margin: 20px 0 0 5px!important;
+		font-size: 12px!important;
+	}
+	p{
+		font-size: 6px!important;
+	}
+	h4{
+		margin: 20px 0 0 10%!important;
+		font-size: 7px!important;
+	}
+	a{
+		padding: 8px 0 0 30% !important;
+		font-size: 6px!important;
+	}
+	a:before{
+		left: 10%!important;
+		top: 35%!important;
+	}
+	a:hover:before{
+		left: 5%!important;
+		top: 35%!important;
+	}
+}
+
+.footer-top__item4 {
+	padding: 0!important;
+	a:nth-child(4) {
+	padding-left: 35% !important;
+	}
+	a:nth-child(5) {
+	padding-left: 35% !important;
+	}
+	a:nth-child(6) {
+	padding-left: 35% !important;
+	}
+}
+
+.footer-top{
+	height: 140px!important;
+}
+
+footer{
+	height: 180px!important;
+	}
+}
+
+@media screen and (max-width: 359px){
+.header-top__phone{
+	font-size: 5px;
+}
+
+.fade{
+	display: none;
+}
+
+.header-bottom__search {
+	width: 30px;
+}
+
+.header-bottom__nav {
+	margin: 0 7px 0 0;
+	width: 14%;
+	font-size: 7px;
+}
+
+.progress{
+	height: 640px;
+}
+
+.footer-top {
+	height: 160px !important;
+}
+
+footer {
+	height: 210px !important;
+}
+
+.footer-top__item{
+a{
+	padding: 8px 0 0 35% !important;
+	font-size: 5px!important;
+	}
+}
+
+.footer-top__item4 {
+	padding: 0!important;
+	a:nth-child(4) {
+	padding-left: 40% !important;
+	}
+	a:nth-child(5) {
+	padding-left: 40% !important;
+	}
+	a:nth-child(6) {
+	padding-left: 40% !important;
+		}
+	}
+}
+
+// --------------< @media />-------------
+
+
+
+
+
+
+
+
+
+
+

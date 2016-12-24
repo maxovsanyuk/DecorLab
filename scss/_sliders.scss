@@ -1,0 +1,193 @@
+.slider{
+	height: 500px;
+	position: relative;
+	background: url(../img/slider.png) center left no-repeat;
+	border-bottom: 1px solid #e0e0e4;
+	&__border{
+		width: 334px;
+		height: 360px;
+		position: absolute;
+		top: 70px;
+		right: 10.5%;
+		background: url(../img/border.png);
+		&:hover &-img{
+			background: url(../img/dlab-h.png);
+		}
+		&-img{
+			width: 196px;
+			height: 36px;
+			position: absolute;
+			top: 70px;
+			left: 55px;
+			background: url(../img/dlab.png);
+			outline: none;
+		}
+		p{
+			width: 350px;
+			height: 30px;
+			position: absolute;
+			top: 120px;
+			left: 55px;
+			font-size: 18px;
+			font-family: 'Raleway';
+			letter-spacing: 1.5px;
+			color: rgb(52, 52, 54);
+		}
+	&-link{
+	padding: 20px 35px 20px 20px ;
+	position: absolute;
+	top: 200px;
+	left: 55px;
+	color: rgb(160, 160, 169);
+	font-size: 14px;
+	font-family: "Proxima";
+	background: #ebebeb;
+	text-decoration: none;
+	text-align: center;
+	outline: none;
+	&:hover{
+		color: #ff7663;
+		&:after{
+			content: url(../img/arrow-l-h.png);
+			right: 10px;
+		}
+	}
+	&:active{
+		background: #DEDEDE;
+	}
+	&:after{
+			content: url(../img/arrow-l.png);
+			position: absolute;
+			right: 15px;
+			}
+		}
+	}
+}
+
+.slider2{
+	height: 450px;
+	background: url(../img/bg2.png) 50% 30px no-repeat;
+	&:hover{
+		background: url(../img/bg2-h.png) 50% -200px no-repeat;
+		@include transition(1s);
+	}
+	h3{
+		position: relative;
+		padding-top: 40px;
+		font-size: 28px;
+		font-family: "Raleway";
+		color: rgb(120, 120, 130);
+		text-align: center;
+		letter-spacing: 1.4px;
+		b{
+			color: #ff765f;
+			font-family: "RalewayBold";
+			text-transform: uppercase;
+		}
+		span{
+			color: #ff765f;
+			text-transform: uppercase;
+		}
+		&:hover{
+			b{
+				color: #5faaff;
+			}
+			&:before{
+				content: url(../img/slider-line-h.png);
+				@include transform(rotateY(360deg));
+				@include transition(.8s);
+			}
+		}
+			&:before{
+				content: url(../img/slider-line.png);
+				position: absolute;
+				top: 70px;
+		}
+	}
+}
+
+.slider2-photo1{
+	height: 260px;
+	margin: 55px 5px 0;
+	background: url(../img/slider2-4.png);
+	background-size: cover;
+	outline: none;
+	&-hover{
+		display: none;
+		position: relative;
+		height: 100%;
+		background: rgba(33,33,33,.7);
+		&:hover{
+			button{
+			background: url(../img/button-h-h.png);
+			@include transform(rotateZ(360deg));
+			@include transition(1s);
+				}
+				p{
+					color: #61C3D4;
+				}
+			}
+			button{
+			position: absolute;
+			margin: auto;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 77px;
+			height: 83px;
+			border: none;
+			outline: none;
+			background: url(../img/button-h.png);
+			cursor: pointer;
+		}
+		p{
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			bottom: 20px;
+			font-size: 16px;
+			font-family: "Proxima";
+			color: rgba(255, 255, 255, .7);
+			text-align: center;
+		}
+	}
+	&:hover{
+		.slider2-photo1-hover{
+			display: block;
+		}
+	}
+}
+
+.slider2-photo2{
+	@extend .slider2-photo1;
+	background: url(../img/slider2-3.png);
+	background-size: cover;
+}
+.slider2-photo3{
+	@extend .slider2-photo1;
+	background: url(../img/slider2-2.png);
+	background-size: cover;
+}
+.slider2-photo4{
+	@extend .slider2-photo1;
+	background: url(../img/slider2-1.png);
+	background-size: cover;
+}
+.slider2-photo5{
+	@extend .slider2-photo1;
+	background: url(../img/slider2-2.png);
+	background-size: cover;
+}
+.slider2-photo6{
+	@extend .slider2-photo1;
+	background: url(../img/slider2-4.png);
+	background-size: cover;
+}
+
+.filtering{
+	.slick-dots {
+	bottom: -45px;
+	}
+}

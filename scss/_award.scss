@@ -1,0 +1,118 @@
+
+.progress{
+	height: 350px;
+	background: #ebebeb;
+	h3{
+	position: relative;
+	padding: 40px 0 55px 0;
+	font-size: 28px;
+	font-family: "Raleway";
+	color: rgb(120, 120, 130);
+	text-align: center;
+	letter-spacing: 1.4px;
+		&:hover{
+			b{
+				color: #5faaff;
+				}
+				&:before{
+				content: url(../img/slider-line-h.png);
+				@include transform(rotateY(360deg));
+				@include transition(.8s);
+				}
+			}
+			&:before{
+				content: url(../img/slider-line2.png);
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: 30px auto 0;
+			}
+	b{
+		color: #ff765f;
+		font-family: "RalewayBold";
+		text-transform: uppercase;
+	}
+	span{
+		color: #ff765f;
+		text-transform: uppercase;
+		}
+	}
+}
+
+.award1{
+	width: 33.3%;
+	height: 160px;
+	float: left;
+	position: relative;
+	cursor: pointer;
+	&:hover{
+		.award1__icon{
+			background: url(../img/award1-h.png);
+			@include transform(rotate(360deg));
+			@include transition(1s);
+		}
+		p{
+			color: #5faaff;
+		}
+	}
+	&__icon{
+		width: 61px;
+		height: 49px;
+		margin: 10px auto;
+		background: url(../img/award1.png);
+	}
+	h4{
+		font-size: 14px;
+		font-family: "Raleway";
+		color: rgb(120, 120, 130);
+		text-align: center;
+		text-transform: uppercase;
+	}
+	p{
+		margin-top: 10px;
+		font-size: 15px;
+		font-family: "Proxima";
+		color: rgba(120, 120, 130, 0.659);
+		text-align: center;
+	}
+}
+
+.award2{
+	@extend .award1;
+		&__icon{
+		width: 177px;
+		height: 100px;
+		margin: 0 auto;
+		background: url(../img/award2.png);
+	}
+	h4{
+		margin-top: 20px;
+	}
+		&:hover{
+		.award2__icon{
+			background: url(../img/award2-h.png);
+			@include transform(rotateX(360deg));
+			@include transition(1s);
+		}
+		h4{
+			color: #ff9a89;
+		}
+	}
+}
+
+.award3{
+	@extend .award1;
+		&__icon{
+		width: 96px;
+		height: 49px;
+		margin: 10px auto;
+		background: url(../img/award3.png);
+	}
+		&:hover{
+		.award3__icon{
+			background: url(../img/award3-h.png);
+			@include transform(rotateY(360deg));
+			@include transition(1s);
+		}
+	}
+}

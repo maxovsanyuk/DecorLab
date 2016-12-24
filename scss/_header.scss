@@ -1,0 +1,206 @@
+.header-top{
+	height: 2.5rem;
+	border-bottom: 1px solid #e0e0e4;
+	&__phone{
+		float: left;
+		width: 175px;
+		height: 25px;
+		position: relative;
+		margin-top: 7.5px;
+		line-height: 25px;
+		text-align: right;
+		padding-right: 15px;
+		font-size: 13px;
+		color: #cfcfd2;
+		font-family: 'ProximaNova';
+		border-right: 1px solid #e0e0e4;
+		text-decoration: none;
+		&:hover{
+			color: #7AB4CC;
+			border-right: 2px solid #7AB4CC;
+			&:before{
+			content: url(../img/tel-h.png);
+			@include transform(rotateY(360deg));
+			@include transition(1s);
+		}
+	}
+		&:before{
+			content: url(../img/tel.png);
+			position: absolute;
+			top: 50%;
+			margin-top: -0.625em;
+			top: 50%;
+			left: 15px;
+		}
+	}
+	&__mail{
+	@extend .header-top__phone;
+	&:hover{
+		&:before{
+		content: url(../img/mail-h.png);
+		}
+	}
+	&:before{
+	content: url(../img/mail.png);
+	left: 12px;
+	}
+}
+button{
+	float: right;
+	width: 175px;
+	height: calc( 100% - .5px);
+	position: relative;
+	background: #f3f3f4;
+	font-size: 13px;
+	font-family: 'ProximaNova';
+	color: rgb(136, 136, 143);
+	border: none;
+	cursor: pointer;
+	outline: none;
+	&:hover{
+	background: #75B2D3;
+	color: #fff;
+	@include transition(.8s);
+	&:before{
+		content: url(../img/login-h.png);
+		}
+	}
+	&:active{
+		background: #6FA5C1;
+		color: #EDEDED;
+		@include transition(0s);
+	}
+	&:before{
+		content: url(../img/login.png);
+		position: absolute;
+		left: 8%;
+		}
+	}
+}
+
+@keyframes logo{
+	from{
+		margin-left: 0;
+	}
+	to{
+		margin-left: 15%;
+		@include opacity(0);
+	}
+}
+
+.header-bottom{
+	height: 60px;
+	position: relative;
+	border-bottom: 1px solid #e0e0e4;
+	&__logo{
+		float: left;
+		position: absolute;
+		top: 25%;
+		bottom: 25%;
+		width: 166px;
+		height: 27px;
+		background: url(../img/logo.png);
+		animation: logo 2s 2s;
+		&:hover{
+			background: url(../img/logo-h.png);
+		}
+	}
+	&__shop{
+		width: 130px;
+		height: 60px;
+		float: right;
+		position: relative;
+		text-align: right;
+		padding-right: 12px;
+		font-family: 'Proxima';
+		font-size: 14px;
+		cursor: pointer;
+		&:hover{
+			& a{
+				color: #7AB4CC;
+				span{
+					color: #E46157;
+					display: block;
+					position: absolute;
+					right: 70px;
+					font-size: 20px;
+					@include transform(rotateY(360deg));
+					@include transition(.8s);
+				}
+			}
+			& a:before{
+				content: url(../img/korzina-h.png);
+			}
+		}
+		&:active{
+			& a:before{
+				content: url(../img/korzina.png);
+			}
+		}
+		a{
+		font-size: 14px;
+		line-height: 60px;
+		color: rgb(136, 136, 143);
+		text-decoration: none;
+		&:before{
+			content: url(../img/korzina.png);
+			position: absolute;
+			top: 6px;
+			left: 10px;
+			}
+		}
+	}
+	&__search{
+		width: 45px;
+		height: 50px;
+		margin-top: 5px;
+		float: right;
+		border-right: 1px solid #f6f6f7;
+		border-left: 1px solid #f6f6f7;
+		&:hover{
+			button{
+				&:before{
+					content: url(../img/search-h.png);
+				}
+			}
+		}
+		button{
+			display: block;
+			margin: 0 auto;
+			line-height: 60px;
+			border: none;
+			outline: none;
+			background: transparent;
+			cursor: pointer;
+			&:before{
+				content: url(../img/search.png);
+			}
+		}
+	}
+	&__nav{
+		float: right;
+		line-height: 60px;
+		position: relative;
+		margin: 0 25px;
+		font-size: 15px;
+		color: rgb(120, 120, 130);
+		font-family: 'ProximaNova';
+		text-transform: uppercase;
+		text-align: right;
+		text-decoration: none;
+		letter-spacing: 1.5px;
+		&:hover{
+			color: #ff7663;
+			border-top: 2px solid #ff7663;
+			margin-top: -2px;
+		}
+	}
+	&__active{
+		&:after{
+			content: url(../img/arrow.png);
+			position: absolute;
+			top: -1px;
+			right: -12px;
+		}
+	}
+}

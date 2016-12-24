@@ -1,0 +1,194 @@
+.category {
+	height: 375px;
+	&__item{
+		width: 33.3%;
+		float: left;
+		height: calc(intherit - 80px);
+		text-align: center;
+		margin: 80px auto 0;
+		&:first-child{
+		p{
+			margin-left: 2rem;
+			}
+		}
+		&:nth-child(2){
+			display: block;
+			margin-top: 55px;
+			p{
+				padding-top: 35px;
+			}
+		}
+		img{
+			&:hover{
+			margin-bottom: 20px;
+			@include transform(rotateY(360deg));
+			@include transition(.8s);
+			}
+		}
+		a{
+		display: block;
+		font-size: 15px;
+		font-family: "Raleway";
+		color: rgb(120, 120, 130);
+		text-transform: uppercase;
+		text-decoration: none;
+		&:hover{
+			color: #6CABD9;
+			font-size: 16px;
+			font-weight: 700;
+			}
+			p{
+				padding-top: 10px;
+			}
+		}
+	}
+}
+
+.dekor-lab{
+	height: 480px;
+	background: url(../img/bg1.png) top center;
+	background-size: cover;
+	&:hover{
+		background: url(../img/bg1-h.png) top center;
+		background-size: cover;
+		@include transition(1.2s);
+	}
+	&__content{
+		width: 53%;
+		height: 250px;
+		float: left;
+		margin: 55px 0 0 40px;
+	}
+	&__logo{
+		width: 162px;
+		height: 25px;
+		display: block;
+		background: url(../img/Decor-Lab.png);
+		&:hover{
+			background: url(../img/Decor-Labe-h.png);
+		}
+	}
+	p{
+		padding: 10px 0 10px 0;
+		color: rgb(52, 52, 54);
+		font-size: 14px;
+		font-family: "Raleway";
+		text-align: justify;
+		letter-spacing: 1px;
+		&:hover span{
+			color: #5faaff;
+			}
+		span{
+			font-family: "RalewayBold";
+		}
+	}
+	&__photo{
+		width: 37.5%;
+		height: 250px;
+		float: right;
+		margin: 55px 35px 0 0;
+		background: url(../img/con-photo.png) center no-repeat;
+		&:hover{
+			background: url(../img/con-photo-h.png) center no-repeat;
+			@include transition(1s);
+		}
+		button{
+			display: block;
+			margin: 23% auto;
+			padding: 15px 35px;
+			font-size: 0.875rem;
+			font-family: "Raleway";
+			color: rgb(255, 255, 255);
+			background: rgba(228,131,116,.85);
+			border: 1px solid #fff;
+			text-align: center;
+			text-transform: uppercase;
+			outline: none;
+			&:hover{
+				background: rgba(116,182,227,.85);
+			}
+			&:active{
+				background: rgba(116,182,227,.5);
+			}
+		}
+	}
+	&__item1{
+		width: 22.7%;
+		height: 90px;
+		float: right;
+		position: relative;
+		margin: 2.5rem 0 0 10px;
+		background: rgba(255,255,255,.7);
+		&:before{
+			content: url(../img/icon4.png);
+			position: absolute;
+			top: 25px;
+			left: 15%;
+		}
+		&:hover {
+			background: url(../img/icon1-1-h.png) center no-repeat;
+			@include transition(.8s);
+			a{
+			color: #ff7663;
+			border: 1px solid #C9C9C9;
+			}
+			&:before{
+			content: url(../img/icon4-h.png);
+			}
+		}
+		a{
+			display: block;
+			width: 96%;
+			height: 89%;
+			margin: 5px auto;
+			border: 1px solid #d3d3d3;
+			padding: 20px 0 20px 32%;
+			font-size: 16px;
+			font-family: 'ProximaBold';
+			color: rgb(47, 47, 51);
+			line-height: 1.125;
+			text-align: justify;
+			text-decoration: none;
+		}
+	}
+	&__item1:nth-child(3){
+		margin-right: 3.4%;
+	}
+		&__item2{
+		@extend .dekor-lab__item1;
+		&:before{
+			content: url(../img/icon3.png);
+		}
+		&:hover {
+			background: url(../img/icon1-1-h.png) top no-repeat;
+			&:before{
+			content: url(../img/icon3-h.png);
+			}
+		}
+	}		&__item3{
+		@extend .dekor-lab__item1;
+		&:before{
+			content: url(../img/icon2.png);
+			top: 20px;
+		}
+		&:hover {
+			background: url(../img/icon1-1-h.png) bottom no-repeat;
+			&:before{
+			content: url(../img/icon2-h.png);
+			top: 20px;
+			}
+		}
+	}
+		&__item4{
+		@extend .dekor-lab__item1;
+		&:before{
+			content: url(../img/icon1.png);
+		}
+		&:hover {
+			background: url(../img/icon1-1-h.png) center no-repeat;
+			&:before{
+			content: url(../img/icon1-h.png);
+			}
+		}
+	}
+}
